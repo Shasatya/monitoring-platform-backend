@@ -1,4 +1,4 @@
-import audit from "../models/audit.js";
+import Audit from "../models/audit.js";
 
 export const logAudit = async ({
   userId,
@@ -8,7 +8,7 @@ export const logAudit = async ({
   metadata,
 }) => {
   try {
-    await audit.create({
+    await Audit.create({
       userId,
       action,
       resource,
